@@ -1,2 +1,4 @@
 # findmydns
-It Provides To Find &amp; Set Best DNS Server to Your Computer
+The Software provides to Find & Set the Best Dns Server for you internet.
+
+For business or questions => theimdall@outlook.com
