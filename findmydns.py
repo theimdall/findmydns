@@ -4,7 +4,6 @@ import subprocess
 import ctypes
 import requests
 
-
 dns_server1 = []
 dns_server2 = []
 dns_serverProvider = []
