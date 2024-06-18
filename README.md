@@ -1,4 +1,4 @@
-![mainMenu](https://github.com/theimdall/findmydns/blob/master/img/mainMenu2.png)
+![mainMenu](https://github.com/theimdall/findmydns/blob/master/img/mainMenu0.png)
 # findmydns
 ### The Software provides to Find & Set the Best Dns Server for you internet.
 
