@@ -1,4 +1,4 @@
-![logo](https://github.com/theimdall/findmydns/blob/master/img/mainMenu0.png)
+![logo](https://github.com/theimdall/findmydns/blob/master/img/logo.png)
 ### The Software Provides To Find & Set The Best Dns Server For Network
 [!] It's not DNS Performance Test. Fastest DNS Server for Network.<br/>
 [!] Must Agree Administration Permission While You Set & Reset DNS Servers
