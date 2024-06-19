@@ -17,7 +17,7 @@ ms_best_id = [0]
 
 
 def main():
-    is_Connected = is_connected()
+    is_Connected = checkConnection()
     if is_Connected:
         dns_serverCurrent,dns_serverCurrentIp = findDnsCurrent()
     else:
@@ -50,7 +50,7 @@ def main():
         option_id = int(input("Option ==> "))
     os.system('cls' if os.name == 'nt' else 'clear')
     print(logo)
-    is_Connected = is_connected()
+    is_Connected = checkConnection()
     if option_id == 0 and is_Connected:
         if os.path.exists(dns_file):
             readDnsFile()
@@ -72,7 +72,7 @@ def main():
         sys.exit()
 
 def checkUpdates():
-    is_Connected = is_connected()
+    is_Connected = checkConnection()
     if is_Connected:
         url = "https://api.github.com/repos/theimdall/findmydns/releases"
         response = requests.get(url)
@@ -121,7 +121,7 @@ def downloadAndInstallUpdate(version):
         
 def analysisDns():
     for id,dns_s in zip(range(0,len(dns_server1)),dns_server1):
-        is_Connected = is_connected()
+        is_Connected = checkConnection()
         if is_Connected:
             ms_values.append(testDns(dns_s))
         else:
@@ -197,7 +197,6 @@ def readDnsFile():
                 dns_server1.append(parts[0])
                 dns_server2.append(parts[1])
                 dns_serverProvider.append(parts[2])
-            
     return dns_server1,dns_server2,dns_serverProvider
 
 def testDns(dns_serv):
@@ -268,7 +267,7 @@ def resetDns():
     input("Process Completed. Press any button for Menu...")
     main()
 
-def is_connected():
+def checkConnection():
     try:
         requests.get('https://www.google.com')
         return True
