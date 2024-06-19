@@ -15,7 +15,6 @@ ms_values = []
 ms_best_id = [0]
 
 
-
 def main():
     is_Connected = checkConnection()
     if is_Connected:
