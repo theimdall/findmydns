@@ -204,7 +204,6 @@ def testDns(dns_serv):
     command = ["ping", dns_serv]
     process = subprocess.Popen(command, stdout=subprocess.PIPE)
     outputCommand, _ = process.communicate()
-    #print(outputCommand)
     ms_v = re.findall(r"Average = (\d+)ms", outputCommand.decode("utf-8"))
     if ms_v == None or ms_v == []:
             ms_v = [99999]
@@ -218,7 +217,6 @@ def findDnsCurrent():
     process = subprocess.Popen(command, stdout=subprocess.PIPE)
     outputCommand, _ = process.communicate()
     outputCommandDecoded = outputCommand.decode("utf-8")
-    #print(outputCommandDecoded)
     output_serverNameInfo = re.search("Server:  ",outputCommandDecoded)
     output_serverIpInfo = re.search("Address:  ",outputCommandDecoded)
     output_midText = re.search("Name:",outputCommandDecoded)
